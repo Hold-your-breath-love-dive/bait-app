@@ -54,6 +54,7 @@ struct SearchView: View {
                         .background(.gray.opacity(0.2))
                     
                     Text("\(contents)")
+                        .padding(.horizontal, 20)
                         .onAppear {
                             if let value = fishData["\(title)"] {
                                 contents = value
