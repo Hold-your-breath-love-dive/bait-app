@@ -51,11 +51,20 @@ struct WritingView: View {
                 .padding(.horizontal, 3)
                 .background(Color("Background"))
                 .cornerRadius(8)
+                if let datas = state.datas {
+                    ForEach(datas, id: \.self) { data in
+                        WritingCommentView(data: data)
+                            .environmentObject(state)
+                    }
+                }
             }
             .padding(.horizontal, 24)
         }
         .showDismiss()
         .navigationBarHidden(true)
+        .onAppear {
+            state.loadData(id: data.id)
+        }
     }
 }
 

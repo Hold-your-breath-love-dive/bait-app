@@ -31,6 +31,7 @@
 		932C31432A5EFCA0001402CE /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932C31412A5EFCA0001402CE /* CreateView.swift */; };
 		932C31442A5EFCA0001402CE /* WritingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932C31422A5EFCA0001402CE /* WritingView.swift */; };
 		932C31492A5EFCE9001402CE /* HomeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932C31482A5EFCE9001402CE /* HomeButtonView.swift */; };
+		932C314D2A5F00A2001402CE /* WritingCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932C314C2A5F00A2001402CE /* WritingCommentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		932C31412A5EFCA0001402CE /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
 		932C31422A5EFCA0001402CE /* WritingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingView.swift; sourceTree = "<group>"; };
 		932C31482A5EFCE9001402CE /* HomeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeButtonView.swift; sourceTree = "<group>"; };
+		932C314C2A5F00A2001402CE /* WritingCommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingCommentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,6 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				932C31422A5EFCA0001402CE /* WritingView.swift */,
+				932C314C2A5F00A2001402CE /* WritingCommentView.swift */,
 			);
 			path = Writing;
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 				930AB7632A5EC58800796ED9 /* HomeView.swift in Sources */,
 				932C31342A5EFC0A001402CE /* Requests.swift in Sources */,
 				932C31492A5EFCE9001402CE /* HomeButtonView.swift in Sources */,
+				932C314D2A5F00A2001402CE /* WritingCommentView.swift in Sources */,
 				520789B42A5EDDD600628356 /* ImagePickerView.swift in Sources */,
 				930AB75E2A5EC49D00796ED9 /* MainView.swift in Sources */,
 				930AB77D2A5ECD5100796ED9 /* Writing.swift in Sources */,

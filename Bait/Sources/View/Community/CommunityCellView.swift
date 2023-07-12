@@ -23,9 +23,10 @@ struct CommunityCellView: View {
     }
     
     func formattedDate() -> String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "M월 d일 게시"
-        return dateFormatter.string(from: data.createDate)
+        let formatter = RelativeDateTimeFormatter()
+        formatter.unitsStyle = .abbreviated
+        formatter.locale = Locale(identifier: "ko_KR")
+        return formatter.localizedString(for: data.createDate, relativeTo: Date())
     }
     
     var body: some View {
