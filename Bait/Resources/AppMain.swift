@@ -1,5 +1,5 @@
 //
-//  BaitApp.swift
+//  AppMain.swift
 //  Bait
 //
 //  Created by Mercen on 2023/07/12.
@@ -8,10 +8,10 @@
 import SwiftUI
 
 @main
-struct BaitApp: App {
+struct AppMain: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
         }
     }
 }
