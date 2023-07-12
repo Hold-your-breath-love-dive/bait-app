@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Kingfisher
 
 struct CommunityCellView: View {
     
@@ -23,21 +22,20 @@ struct CommunityCellView: View {
     }
     
     func formattedDate() -> String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "M월 d일 게시"
-        return dateFormatter.string(from: data.createDate)
+        let formatter = RelativeDateTimeFormatter()
+        formatter.unitsStyle = .abbreviated
+        formatter.locale = Locale(identifier: "ko_KR")
+        return formatter.localizedString(for: data.createDate, relativeTo: Date())
     }
     
     var body: some View {
         VStack(spacing: 0) {
             if let image = data.image {
-                KFImage(URL(string: image)!)
-                    .placeholder {
-                        Color("Background")
-                    }
+                Image(uiImage: UIImage(data: Data(base64Encoded: image)!)!)
                     .resizable()
                     .scaledToFill()
                     .frame(height: 195)
+                    .clipped()
             }
             HStack {
                 VStack(alignment: .leading, spacing: 6) {
@@ -51,10 +49,10 @@ struct CommunityCellView: View {
                 }
                 Spacer()
             }
+            .padding(10)
+            .padding(.horizontal, 3)
         }
         .frame(maxWidth: .infinity)
-        .padding(10)
-        .padding(.horizontal, 3)
         .background(Color("Background"))
         .cornerRadius(8)
     }

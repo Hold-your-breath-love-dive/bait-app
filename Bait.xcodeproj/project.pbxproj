@@ -31,6 +31,8 @@
 		932C31432A5EFCA0001402CE /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932C31412A5EFCA0001402CE /* CreateView.swift */; };
 		932C31442A5EFCA0001402CE /* WritingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932C31422A5EFCA0001402CE /* WritingView.swift */; };
 		932C31492A5EFCE9001402CE /* HomeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932C31482A5EFCE9001402CE /* HomeButtonView.swift */; };
+		932C314D2A5F00A2001402CE /* WritingCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932C314C2A5F00A2001402CE /* WritingCommentView.swift */; };
+		932C314F2A5F0A7F001402CE /* WritingCommentState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932C314E2A5F0A7F001402CE /* WritingCommentState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +59,8 @@
 		932C31412A5EFCA0001402CE /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
 		932C31422A5EFCA0001402CE /* WritingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingView.swift; sourceTree = "<group>"; };
 		932C31482A5EFCE9001402CE /* HomeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeButtonView.swift; sourceTree = "<group>"; };
+		932C314C2A5F00A2001402CE /* WritingCommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingCommentView.swift; sourceTree = "<group>"; };
+		932C314E2A5F0A7F001402CE /* WritingCommentState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingCommentState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				932C31392A5EFC40001402CE /* WritingState.swift */,
+				932C314E2A5F0A7F001402CE /* WritingCommentState.swift */,
 			);
 			path = Writing;
 			sourceTree = "<group>";
@@ -266,6 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				932C31422A5EFCA0001402CE /* WritingView.swift */,
+				932C314C2A5F00A2001402CE /* WritingCommentView.swift */,
 			);
 			path = Writing;
 			sourceTree = "<group>";
@@ -373,11 +379,13 @@
 				930AB7632A5EC58800796ED9 /* HomeView.swift in Sources */,
 				932C31342A5EFC0A001402CE /* Requests.swift in Sources */,
 				932C31492A5EFCE9001402CE /* HomeButtonView.swift in Sources */,
+				932C314D2A5F00A2001402CE /* WritingCommentView.swift in Sources */,
 				520789B42A5EDDD600628356 /* ImagePickerView.swift in Sources */,
 				930AB75E2A5EC49D00796ED9 /* MainView.swift in Sources */,
 				930AB77D2A5ECD5100796ED9 /* Writing.swift in Sources */,
 				930AB77F2A5ECDA100796ED9 /* CommunityCellView.swift in Sources */,
 				932C31432A5EFCA0001402CE /* CreateView.swift in Sources */,
+				932C314F2A5F0A7F001402CE /* WritingCommentState.swift in Sources */,
 				520789AC2A5ED81800628356 /* FishClassifier.mlpackage in Sources */,
 				930AB7672A5EC59100796ED9 /* MenuView.swift in Sources */,
 				930AB7742A5EC63600796ED9 /* CommunityState.swift in Sources */,
@@ -441,7 +449,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -495,7 +503,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -523,7 +531,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
-				IPHONEOS_DEPLOYMENT_TARGET = 15;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -558,7 +566,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
-				IPHONEOS_DEPLOYMENT_TARGET = 15;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
