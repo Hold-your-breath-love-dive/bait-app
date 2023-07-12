@@ -6,13 +6,17 @@
 //
 
 import SwiftUI
+import OpenTDS
 
 struct CommunityView: View {
     
     @StateObject var state = CommunityState()
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        TossScrollView("커뮤니티") {
+            
+        }
+        .background(Color.white.ignoresSafeArea())
     }
 }
 

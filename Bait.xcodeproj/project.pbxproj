@@ -19,6 +19,9 @@
 		930AB7722A5EC62100796ED9 /* HomeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930AB7712A5EC62100796ED9 /* HomeState.swift */; };
 		930AB7742A5EC63600796ED9 /* CommunityState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930AB7732A5EC63600796ED9 /* CommunityState.swift */; };
 		930AB7762A5EC63B00796ED9 /* MenuState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930AB7752A5EC63B00796ED9 /* MenuState.swift */; };
+		930AB77B2A5ECD4D00796ED9 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930AB77A2A5ECD4D00796ED9 /* Comment.swift */; };
+		930AB77D2A5ECD5100796ED9 /* Writing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930AB77C2A5ECD5100796ED9 /* Writing.swift */; };
+		930AB77F2A5ECDA100796ED9 /* CommunityCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930AB77E2A5ECDA100796ED9 /* CommunityCellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +36,9 @@
 		930AB7732A5EC63600796ED9 /* CommunityState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityState.swift; sourceTree = "<group>"; };
 		930AB7752A5EC63B00796ED9 /* MenuState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuState.swift; sourceTree = "<group>"; };
 		930AB7792A5EC7B100796ED9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		930AB77A2A5ECD4D00796ED9 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		930AB77C2A5ECD5100796ED9 /* Writing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Writing.swift; sourceTree = "<group>"; };
+		930AB77E2A5ECDA100796ED9 /* CommunityCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,48 +86,8 @@
 			children = (
 				930AB7442A5EC35700796ED9 /* Assets.xcassets */,
 				930AB7402A5EC35600796ED9 /* AppMain.swift */,
-				930AB7502A5EC39B00796ED9 /* Components */,
-				930AB7512A5EC40700796ED9 /* Extensions */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		930AB7502A5EC39B00796ED9 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				930AB7542A5EC41600796ED9 /* View */,
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
-		930AB7512A5EC40700796ED9 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				930AB7532A5EC41300796ED9 /* View */,
-				930AB7522A5EC40F00796ED9 /* Foundation */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		930AB7522A5EC40F00796ED9 /* Foundation */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Foundation;
-			sourceTree = "<group>";
-		};
-		930AB7532A5EC41300796ED9 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		930AB7542A5EC41600796ED9 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		930AB7552A5EC41F00796ED9 /* Sources */ = {
@@ -175,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				930AB7642A5EC58D00796ED9 /* CommunityView.swift */,
+				930AB77E2A5ECDA100796ED9 /* CommunityCellView.swift */,
 			);
 			path = Community;
 			sourceTree = "<group>";
@@ -222,6 +189,8 @@
 		930AB7772A5EC67A00796ED9 /* Community */ = {
 			isa = PBXGroup;
 			children = (
+				930AB77C2A5ECD5100796ED9 /* Writing.swift */,
+				930AB77A2A5ECD4D00796ED9 /* Comment.swift */,
 			);
 			path = Community;
 			sourceTree = "<group>";
@@ -309,9 +278,12 @@
 				930AB7722A5EC62100796ED9 /* HomeState.swift in Sources */,
 				930AB7632A5EC58800796ED9 /* HomeView.swift in Sources */,
 				930AB75E2A5EC49D00796ED9 /* MainView.swift in Sources */,
+				930AB77D2A5ECD5100796ED9 /* Writing.swift in Sources */,
+				930AB77F2A5ECDA100796ED9 /* CommunityCellView.swift in Sources */,
 				930AB7672A5EC59100796ED9 /* MenuView.swift in Sources */,
 				930AB7742A5EC63600796ED9 /* CommunityState.swift in Sources */,
 				930AB7652A5EC58D00796ED9 /* CommunityView.swift in Sources */,
+				930AB77B2A5ECD4D00796ED9 /* Comment.swift in Sources */,
 				930AB7412A5EC35600796ED9 /* AppMain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,5 +8,5 @@
 import Combine
 
 class CommunityState: ObservableObject {
-
+    
 }
