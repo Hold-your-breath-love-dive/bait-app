@@ -12,6 +12,7 @@ import Kingfisher
 struct WritingView: View {
     
     let data: Writing
+    @Environment(\.dismiss) var dismiss
     @StateObject var state = WritingState()
     
     func formattedDate() -> String {
@@ -48,9 +49,20 @@ struct WritingView: View {
                         VStack(alignment: .leading, spacing: 6) {
                             Text("\(name()) \(content())")
                                 .multilineTextAlignment(.leading)
-                            Text("\(formattedDate())")
-                                .font(.system(size: 14))
-                                .foregroundColor(.gray)
+                            HStack {
+                                Text("\(formattedDate())")
+                                    .font(.system(size: 14))
+                                Spacer()
+                                Button(action: {
+                                    state.delete.toggle()
+                                }) {
+                                    Image(systemName: "trash")
+                                        .resizable()
+                                        .frame(width: 10, height: 10)
+                                }
+                                .offset(x: 7)
+                            }
+                            .foregroundColor(.gray)
                         }
                         Spacer()
                     }
@@ -71,6 +83,19 @@ struct WritingView: View {
         }
         .showDismiss()
         .navigationBarHidden(true)
+        .alert("삭제", isPresented: $state.delete) {
+            SecureField("비밀번호", text: $state.enteredPassword)
+            Button("승인", action: {
+                state.delete(id: data.id) {
+                    dismiss()
+                }
+            })
+            Button("취소", role: .cancel) {
+                state.enteredPassword = String()
+            }
+        } message: {
+            Text("비밀번호를 입력해 삭제하세요.")
+        }
         .onAppear {
             state.loadData(id: data.id)
         }
