@@ -16,7 +16,7 @@ struct MainView: View {
                     .tossTabItem("홈", Image("Home"))
                 CommunityView()
                     .tossTabItem("커뮤니티", Image("Community"))
-                MenuView()
+                StartGameView()
                     .tossTabItem("메뉴", Image("Menu"))
             }
         }
