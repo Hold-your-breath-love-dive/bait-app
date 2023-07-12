@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		520789AC2A5ED81800628356 /* FishClassifier.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 520789AB2A5ED81800628356 /* FishClassifier.mlpackage */; };
 		520789B42A5EDDD600628356 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520789B32A5EDDD600628356 /* ImagePickerView.swift */; };
 		520789B62A5EDF4E00628356 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520789B52A5EDF4E00628356 /* SearchView.swift */; };
+		5245ABE02A5F103500DF3BD3 /* FishClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5245ABDF2A5F103500DF3BD3 /* FishClassifier.mlmodel */; };
+		5245ABE22A5F2D1500DF3BD3 /* FishData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5245ABE12A5F2D1500DF3BD3 /* FishData.swift */; };
 		930AB7412A5EC35600796ED9 /* AppMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930AB7402A5EC35600796ED9 /* AppMain.swift */; };
 		930AB7452A5EC35700796ED9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 930AB7442A5EC35700796ED9 /* Assets.xcassets */; };
 		930AB75E2A5EC49D00796ED9 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930AB75D2A5EC49D00796ED9 /* MainView.swift */; };
@@ -36,9 +37,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		520789AB2A5ED81800628356 /* FishClassifier.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = FishClassifier.mlpackage; sourceTree = "<group>"; };
 		520789B32A5EDDD600628356 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 		520789B52A5EDF4E00628356 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		5245ABDF2A5F103500DF3BD3 /* FishClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FishClassifier.mlmodel; sourceTree = "<group>"; };
+		5245ABE12A5F2D1500DF3BD3 /* FishData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishData.swift; sourceTree = "<group>"; };
 		930AB73D2A5EC35600796ED9 /* Bait.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bait.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		930AB7402A5EC35600796ED9 /* AppMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMain.swift; sourceTree = "<group>"; };
 		930AB7442A5EC35700796ED9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -81,6 +83,8 @@
 			isa = PBXGroup;
 			children = (
 				520789B52A5EDF4E00628356 /* SearchView.swift */,
+				5245ABE12A5F2D1500DF3BD3 /* FishData.swift */,
+				5245ABDF2A5F103500DF3BD3 /* FishClassifier.mlmodel */,
 				932C314A2A5EFD18001402CE /* Picker */,
 			);
 			path = Search;
@@ -89,7 +93,6 @@
 		520789B02A5EDDA900628356 /* FishClassifier */ = {
 			isa = PBXGroup;
 			children = (
-				520789AB2A5ED81800628356 /* FishClassifier.mlpackage */,
 			);
 			path = FishClassifier;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				932C313A2A5EFC40001402CE /* WritingState.swift in Sources */,
+				5245ABE22A5F2D1500DF3BD3 /* FishData.swift in Sources */,
 				930AB7762A5EC63B00796ED9 /* MenuState.swift in Sources */,
 				932C31442A5EFCA0001402CE /* WritingView.swift in Sources */,
 				932C31382A5EFC3F001402CE /* CreateState.swift in Sources */,
@@ -391,6 +395,7 @@
 				930AB7742A5EC63600796ED9 /* CommunityState.swift in Sources */,
 				930AB7652A5EC58D00796ED9 /* CommunityView.swift in Sources */,
 				520789B62A5EDF4E00628356 /* SearchView.swift in Sources */,
+				5245ABE02A5F103500DF3BD3 /* FishClassifier.mlmodel in Sources */,
 				930AB77B2A5ECD4D00796ED9 /* Comment.swift in Sources */,
 				930AB7412A5EC35600796ED9 /* AppMain.swift in Sources */,
 			);
@@ -521,7 +526,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = 56V747V83R;
+				DEVELOPMENT_TEAM = H4CNC953L3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Bait/Info.plist;
@@ -556,7 +561,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = 56V747V83R;
+				DEVELOPMENT_TEAM = H4CNC953L3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Bait/Info.plist;
