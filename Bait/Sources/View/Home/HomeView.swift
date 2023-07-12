@@ -48,6 +48,7 @@ struct HomeView: View {
                         HomeButtonView("카메라로 찍기")
 
                     }
+                    .disabled(true)
                     .background(Color.white)
                     .cornerRadius(8)
                     .fullScreenCover(isPresented: $isShowCamera) {
