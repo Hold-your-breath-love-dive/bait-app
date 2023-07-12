@@ -10,6 +10,8 @@ import OpenTDS
 
 struct HomeView: View {
     
+    @State private var waterTemp = "99"
+    
     @State private var isShowPhotoLibrary = false
     @State private var isShowCamera = false
     @State private var isShowSearchView = false
@@ -24,7 +26,12 @@ struct HomeView: View {
         TossScrollView("다이브") {
             HStack {
                 VStack(alignment: .leading) {
-                    Text("7월 12일 · 오늘의 바다 평균수온 22도")
+                    Text("7월 12일 · 오늘의 바다 평균수온 \(waterTemp)도")
+                        .onAppear {
+                            state.getWaterTemp { updatedWaterTemp in
+                                waterTemp = updatedWaterTemp
+                            }
+                        }
                         .font(.system(size: 14))
                         .foregroundColor(.gray)
                     VStack(spacing: 15) {
@@ -46,7 +53,7 @@ struct HomeView: View {
                         self.isShowCamera = true
                     }) {
                         HomeButtonView("카메라로 찍기")
-
+                        
                     }
                     .background(Color.white)
                     .cornerRadius(8)
