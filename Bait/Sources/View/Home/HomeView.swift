@@ -6,10 +6,16 @@
 //
 
 import SwiftUI
-import PhotosUI
 import OpenTDS
 
 struct HomeView: View {
+    
+    @State private var isShowPhotoLibrary = false
+    @State private var isShowCamera = false
+    @State private var isShowSearchView = false
+    
+    @State private var image = UIImage()
+    @State private var result = "First you've to select an image"
     
     @StateObject var state = HomeState()
     
@@ -35,38 +41,74 @@ struct HomeView: View {
                     .frame(maxWidth: .infinity)
                     .background(Color.white)
                     .cornerRadius(8)
-                    Button(action: state.presentCamara) {
-                        HStack {
-                            Text("카메라로 찍기")
-                                .foregroundColor(Color.black)
-                            Spacer()
-                        }
-                        .frame(maxWidth: .infinity)
-                        .padding()
+                    
+                    Button(action: {
+                        self.isShowCamera = true
+                    }) {
+                        ButtonView("카메라로 찍기")
+
                     }
                     .background(Color.white)
                     .cornerRadius(8)
-                    Button(action: state.presentPhoto) {
-                        HStack {
-                            Text("갤러리에서 가져오기")
-                                .foregroundColor(Color.black)
-                            Spacer()
-                        }
-                        .frame(maxWidth: .infinity)
-                        .padding()
+                    .fullScreenCover(isPresented: $isShowCamera) {
+                        ImagePicker(result: self.$result, selectedImage: self.$image, sourceType: .camera)
+                            .onDisappear {
+                                if !result.isEmpty {
+                                    isShowSearchView = true
+                                }
+                            }
+                    }
+                    
+                    Button(action: {
+                        self.isShowPhotoLibrary = true
+                    }) {
+                        ButtonView("갤러리에서 가져오기")
+
                     }
                     .background(Color.white)
                     .cornerRadius(8)
+                    .sheet(isPresented: $isShowPhotoLibrary) {
+                        ImagePicker(result: self.$result, selectedImage: self.$image, sourceType: .photoLibrary)
+                            .onDisappear {
+                                if !result.isEmpty {
+                                    isShowSearchView = true
+                                }
+                            }
+                    }
                 }
                 .padding(.horizontal, 20)
             }
         }
         .background(Color("Background"))
+        .fullScreenCover(isPresented: $isShowSearchView) {
+            SearchView(isShowingSearchView: $isShowSearchView, selectedImage: image)
+        }
     }
 }
 
-struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeView()
+struct ButtonView: View {
+    var title: String
+    
+    init(_ title: String) {
+        self.title = title
     }
+    
+    var body: some View {
+        HStack {
+            Text("\(title)")
+                .foregroundColor(Color.black)
+                .font(.system(size: 18, weight: .semibold))
+            
+            Spacer()
+            
+            Image("RightArrow")
+                .resizable()
+                .frame(width: 24, height: 24)
+        }
+        .frame(maxWidth: .infinity)
+        .padding()
+        .background(Color.white)
+        .cornerRadius(8)
+    }
+    
 }

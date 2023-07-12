@@ -1,0 +1,24 @@
+{
+    "fileFormatVersion": "1.0.0",
+    "itemInfoEntries": {
+        "0DDAF6F9-C096-421F-89A2-249365B3AA98": {
+            "author": "com.apple.CoreML",
+            "description": "External FeatureDescription Overlay",
+            "name": "FeatureDescriptions.json",
+            "path": "com.apple.CoreML/FeatureDescriptions.json"
+        },
+        "1AB01F20-F83C-45D6-A30A-B6E4DD67B624": {
+            "author": "com.apple.CoreML",
+            "description": "External Metadata Overlay",
+            "name": "Metadata.json",
+            "path": "com.apple.CoreML/Metadata.json"
+        },
+        "27D37EF0-7622-41F2-B329-0A19544F0DC6": {
+            "author": "com.apple.CoreML",
+            "description": "CoreML Model Specification",
+            "name": "FishClassifier.mlmodel",
+            "path": "com.apple.CoreML/FishClassifier.mlmodel"
+        }
+    },
+    "rootModelIdentifier": "27D37EF0-7622-41F2-B329-0A19544F0DC6"
+}
