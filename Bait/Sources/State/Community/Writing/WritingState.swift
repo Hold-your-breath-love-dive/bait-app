@@ -28,6 +28,9 @@ class WritingState: ObservableObject {
                       "password": self.password,
                       "content": self.content]
         Requests.simple("\(API)/comment/\(id)", .post, params: params) {
+            self.name = String()
+            self.password = String()
+            self.content = String()
             self.loadData(id: id)
         }
     }
