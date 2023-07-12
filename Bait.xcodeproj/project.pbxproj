@@ -32,7 +32,6 @@
 		930AB7712A5EC62100796ED9 /* HomeState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeState.swift; sourceTree = "<group>"; };
 		930AB7732A5EC63600796ED9 /* CommunityState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityState.swift; sourceTree = "<group>"; };
 		930AB7752A5EC63B00796ED9 /* MenuState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuState.swift; sourceTree = "<group>"; };
-		930AB7782A5EC69100796ED9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		930AB7792A5EC7B100796ED9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,7 +69,6 @@
 		930AB73F2A5EC35600796ED9 /* Bait */ = {
 			isa = PBXGroup;
 			children = (
-				930AB7782A5EC69100796ED9 /* Info.plist */,
 				930AB74E2A5EC38800796ED9 /* Resources */,
 				930AB7552A5EC41F00796ED9 /* Sources */,
 			);
