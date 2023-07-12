@@ -86,48 +86,8 @@
 			children = (
 				930AB7442A5EC35700796ED9 /* Assets.xcassets */,
 				930AB7402A5EC35600796ED9 /* AppMain.swift */,
-				930AB7502A5EC39B00796ED9 /* Components */,
-				930AB7512A5EC40700796ED9 /* Extensions */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		930AB7502A5EC39B00796ED9 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				930AB7542A5EC41600796ED9 /* View */,
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
-		930AB7512A5EC40700796ED9 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				930AB7532A5EC41300796ED9 /* View */,
-				930AB7522A5EC40F00796ED9 /* Foundation */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		930AB7522A5EC40F00796ED9 /* Foundation */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Foundation;
-			sourceTree = "<group>";
-		};
-		930AB7532A5EC41300796ED9 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		930AB7542A5EC41600796ED9 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		930AB7552A5EC41F00796ED9 /* Sources */ = {
