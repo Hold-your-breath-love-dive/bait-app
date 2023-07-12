@@ -1,5 +1,5 @@
 //
-//  ImagePickerModifier.swift
+//  ImagePickerView.swift
 //  Bait
 //
 //  Created by 이민규 on 2023/07/12.
@@ -10,9 +10,9 @@ import SwiftUI
 import CoreML
 import Vision
 
-struct ImagePicker: UIViewControllerRepresentable {
+struct ImagePickerView: UIViewControllerRepresentable {
 
-    @Binding1 var result: String
+    @Binding var result: String
     @Binding var selectedImage: UIImage
     @Environment(\.presentationMode)  var presentationMode
     
@@ -22,7 +22,7 @@ struct ImagePicker: UIViewControllerRepresentable {
         Coordinator(self)
     }
     
-    func makeUIViewController(context: UIViewControllerRepresentableContext<ImagePicker>) -> UIImagePickerController {
+    func makeUIViewController(context: UIViewControllerRepresentableContext<ImagePickerView>) -> UIImagePickerController {
 
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = context.coordinator
@@ -32,7 +32,7 @@ struct ImagePicker: UIViewControllerRepresentable {
         return imagePicker
     }
 
-    func updateUIViewController(_ uiViewController: UIImagePickerController, context: UIViewControllerRepresentableContext<ImagePicker>) {
+    func updateUIViewController(_ uiViewController: UIImagePickerController, context: UIViewControllerRepresentableContext<ImagePickerView>) {
 
     }
 }
@@ -40,9 +40,9 @@ struct ImagePicker: UIViewControllerRepresentable {
 
 final class Coordinator: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
  
-    var parent: ImagePicker
+    var parent: ImagePickerView
 
-    init(_ parent: ImagePicker) {
+    init(_ parent: ImagePickerView) {
         self.parent = parent
     }
  

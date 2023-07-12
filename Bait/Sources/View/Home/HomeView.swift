@@ -31,11 +31,11 @@ struct HomeView: View {
                         Image("fish")
                             .padding([.top, .bottom], 10)
                         Text("해양생물을 찍고 찾아보세요!")
-                            .font(.system(size: 20) .bold())
+                            .font(.system(size: 20, weight: .bold))
                         Text("해양생물을 카메라로 찍거나 갤러리에 있는 물고기 사진을 \n 가져와서 업로드 하시면 어떤 해양생물인지 알려드려요.")
                             .font(.system(size: 14))
                             .lineLimit(2)
-                            .foregroundColor   (Color.gray)
+                            .foregroundColor(Color.gray)
                     }
                     .padding(.vertical, 15)
                     .frame(maxWidth: .infinity)
@@ -45,13 +45,13 @@ struct HomeView: View {
                     Button(action: {
                         self.isShowCamera = true
                     }) {
-                        ButtonView("카메라로 찍기")
+                        HomeButtonView("카메라로 찍기")
 
                     }
                     .background(Color.white)
                     .cornerRadius(8)
                     .fullScreenCover(isPresented: $isShowCamera) {
-                        ImagePicker(result: self.$result, selectedImage: self.$image, sourceType: .camera)
+                        ImagePickerView(result: self.$result, selectedImage: self.$image, sourceType: .camera)
                             .onDisappear {
                                 if !result.isEmpty {
                                     isShowSearchView = true
@@ -62,13 +62,13 @@ struct HomeView: View {
                     Button(action: {
                         self.isShowPhotoLibrary = true
                     }) {
-                        ButtonView("갤러리에서 가져오기")
+                        HomeButtonView("갤러리에서 가져오기")
 
                     }
                     .background(Color.white)
                     .cornerRadius(8)
                     .sheet(isPresented: $isShowPhotoLibrary) {
-                        ImagePicker(result: self.$result, selectedImage: self.$image, sourceType: .photoLibrary)
+                        ImagePickerView(result: self.$result, selectedImage: self.$image, sourceType: .photoLibrary)
                             .onDisappear {
                                 if !result.isEmpty {
                                     isShowSearchView = true
@@ -76,7 +76,7 @@ struct HomeView: View {
                             }
                     }
                 }
-                .padding(.horizontal, 20)
+                .padding(.horizontal, 24)
             }
         }
         .background(Color("Background"))
@@ -84,31 +84,4 @@ struct HomeView: View {
             SearchView(isShowingSearchView: $isShowSearchView, selectedImage: image)
         }
     }
-}
-
-struct ButtonView: View {
-    var title: String
-    
-    init(_ title: String) {
-        self.title = title
-    }
-    
-    var body: some View {
-        HStack {
-            Text("\(title)")
-                .foregroundColor(Color.black)
-                .font(.system(size: 18, weight: .semibold))
-            
-            Spacer()
-            
-            Image("RightArrow")
-                .resizable()
-                .frame(width: 24, height: 24)
-        }
-        .frame(maxWidth: .infinity)
-        .padding()
-        .background(Color.white)
-        .cornerRadius(8)
-    }
-    
 }
