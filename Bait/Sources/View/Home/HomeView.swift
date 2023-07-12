@@ -11,6 +11,11 @@ import OpenTDS
 
 struct HomeView: View {
     
+    @State private var isShowPhotoLibrary = false
+    @State private var isShowCamera = false
+    @State private var image = UIImage()
+    @State private var result = "First you've to select an image"
+    
     @StateObject var state = HomeState()
     
     var body: some View {
@@ -36,12 +41,14 @@ struct HomeView: View {
                     .background(Color.white)
                     .cornerRadius(8)
                     
-                    Button(action: state.presentCamara) {
+                    Button(action: {
+                        self.isShowCamera = true
+                    }) {
                         HStack {
                             Text("카메라로 찍기")
                                 .foregroundColor(Color.black)
                                 .font(.system(size: 18, weight: .semibold))
-
+                            
                             Spacer()
                             
                             Image("RightArrow")
@@ -53,13 +60,18 @@ struct HomeView: View {
                     }
                     .background(Color.white)
                     .cornerRadius(8)
+                    .sheet(isPresented: $isShowPhotoLibrary) {
+                        ImagePicker(result: self.$result, selectedImage: self.$image, sourceType: .photoLibrary)
+                    }
                     
-                    Button(action: state.presentPhoto) {
+                    Button(action: {
+                        self.isShowPhotoLibrary = true
+                    }) {
                         HStack {
-                            Text("카메라로 찍기")
+                            Text("갤러리에서 가져오기")
                                 .foregroundColor(Color.black)
                                 .font(.system(size: 18, weight: .semibold))
-
+                            
                             Spacer()
                             
                             Image("RightArrow")
@@ -71,6 +83,9 @@ struct HomeView: View {
                     }
                     .background(Color.white)
                     .cornerRadius(8)
+                    .sheet(isPresented: $isShowCamera) {
+                        ImagePicker(result: self.$result, selectedImage: self.$image, sourceType: .camera)
+                    }
                 }
                 .padding(.horizontal, 20)
             }
