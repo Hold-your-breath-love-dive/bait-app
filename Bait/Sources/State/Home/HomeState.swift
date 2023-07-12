@@ -6,8 +6,12 @@
 //
 
 import Combine
+import SwiftUI
 
 class HomeState: ObservableObject {
+    
+    @State var selectedImage = UIImage()
+    @State var isImagePickerShown = false
     
     func presentCamara() {
         

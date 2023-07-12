@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		520789AC2A5ED81800628356 /* FishClassifier.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 520789AB2A5ED81800628356 /* FishClassifier.mlpackage */; };
+		520789AF2A5EDD4900628356 /* FishClassifierModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520789AE2A5EDD4900628356 /* FishClassifierModel.swift */; };
+		520789B22A5EDDB200628356 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520789B12A5EDDB200628356 /* Mocks.swift */; };
+		520789B42A5EDDD600628356 /* ImagePickerModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520789B32A5EDDD600628356 /* ImagePickerModifier.swift */; };
+		520789B62A5EDF4E00628356 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520789B52A5EDF4E00628356 /* SearchView.swift */; };
 		930AB7412A5EC35600796ED9 /* AppMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930AB7402A5EC35600796ED9 /* AppMain.swift */; };
 		930AB7452A5EC35700796ED9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 930AB7442A5EC35700796ED9 /* Assets.xcassets */; };
 		930AB75E2A5EC49D00796ED9 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930AB75D2A5EC49D00796ED9 /* MainView.swift */; };
@@ -27,6 +31,10 @@
 
 /* Begin PBXFileReference section */
 		520789AB2A5ED81800628356 /* FishClassifier.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = FishClassifier.mlpackage; sourceTree = "<group>"; };
+		520789AE2A5EDD4900628356 /* FishClassifierModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishClassifierModel.swift; sourceTree = "<group>"; };
+		520789B12A5EDDB200628356 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
+		520789B32A5EDDD600628356 /* ImagePickerModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerModifier.swift; sourceTree = "<group>"; };
+		520789B52A5EDF4E00628356 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		930AB73D2A5EC35600796ED9 /* Bait.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bait.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		930AB7402A5EC35600796ED9 /* AppMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMain.swift; sourceTree = "<group>"; };
 		930AB7442A5EC35700796ED9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,6 +65,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		520789AD2A5ED8EF00628356 /* SearchView */ = {
+			isa = PBXGroup;
+			children = (
+				520789B52A5EDF4E00628356 /* SearchView.swift */,
+				520789B32A5EDDD600628356 /* ImagePickerModifier.swift */,
+			);
+			path = SearchView;
+			sourceTree = "<group>";
+		};
+		520789B02A5EDDA900628356 /* FishClassifier */ = {
+			isa = PBXGroup;
+			children = (
+				520789AB2A5ED81800628356 /* FishClassifier.mlpackage */,
+				520789AE2A5EDD4900628356 /* FishClassifierModel.swift */,
+				520789B12A5EDDB200628356 /* Mocks.swift */,
+			);
+			path = FishClassifier;
+			sourceTree = "<group>";
+		};
 		930AB7342A5EC35600796ED9 = {
 			isa = PBXGroup;
 			children = (
@@ -86,7 +113,6 @@
 		930AB74E2A5EC38800796ED9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				520789AB2A5ED81800628356 /* FishClassifier.mlpackage */,
 				930AB7442A5EC35700796ED9 /* Assets.xcassets */,
 				930AB7402A5EC35600796ED9 /* AppMain.swift */,
 			);
@@ -106,6 +132,7 @@
 		930AB7562A5EC42A00796ED9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				520789B02A5EDDA900628356 /* FishClassifier */,
 				930AB7772A5EC67A00796ED9 /* Community */,
 			);
 			path = Model;
@@ -114,6 +141,7 @@
 		930AB7572A5EC43200796ED9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				520789AD2A5ED8EF00628356 /* SearchView */,
 				930AB75C2A5EC49500796ED9 /* Main */,
 				930AB7592A5EC44300796ED9 /* Home */,
 				930AB75A2A5EC44700796ED9 /* Community */,
@@ -278,8 +306,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				930AB7762A5EC63B00796ED9 /* MenuState.swift in Sources */,
+				520789AF2A5EDD4900628356 /* FishClassifierModel.swift in Sources */,
 				930AB7722A5EC62100796ED9 /* HomeState.swift in Sources */,
 				930AB7632A5EC58800796ED9 /* HomeView.swift in Sources */,
+				520789B42A5EDDD600628356 /* ImagePickerModifier.swift in Sources */,
 				930AB75E2A5EC49D00796ED9 /* MainView.swift in Sources */,
 				930AB77D2A5ECD5100796ED9 /* Writing.swift in Sources */,
 				930AB77F2A5ECDA100796ED9 /* CommunityCellView.swift in Sources */,
@@ -287,6 +317,8 @@
 				930AB7672A5EC59100796ED9 /* MenuView.swift in Sources */,
 				930AB7742A5EC63600796ED9 /* CommunityState.swift in Sources */,
 				930AB7652A5EC58D00796ED9 /* CommunityView.swift in Sources */,
+				520789B62A5EDF4E00628356 /* SearchView.swift in Sources */,
+				520789B22A5EDDB200628356 /* Mocks.swift in Sources */,
 				930AB77B2A5ECD4D00796ED9 /* Comment.swift in Sources */,
 				930AB7412A5EC35600796ED9 /* AppMain.swift in Sources */,
 			);

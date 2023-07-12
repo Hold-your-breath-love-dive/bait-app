@@ -35,22 +35,36 @@ struct HomeView: View {
                     .frame(maxWidth: .infinity)
                     .background(Color.white)
                     .cornerRadius(8)
+                    
                     Button(action: state.presentCamara) {
                         HStack {
                             Text("카메라로 찍기")
                                 .foregroundColor(Color.black)
+                                .font(.system(size: 18, weight: .semibold))
+
                             Spacer()
+                            
+                            Image("RightArrow")
+                                .resizable()
+                                .frame(width: 24, height: 24)
                         }
                         .frame(maxWidth: .infinity)
                         .padding()
                     }
                     .background(Color.white)
                     .cornerRadius(8)
+                    
                     Button(action: state.presentPhoto) {
                         HStack {
-                            Text("갤러리에서 가져오기")
+                            Text("카메라로 찍기")
                                 .foregroundColor(Color.black)
+                                .font(.system(size: 18, weight: .semibold))
+
                             Spacer()
+                            
+                            Image("RightArrow")
+                                .resizable()
+                                .frame(width: 24, height: 24)
                         }
                         .frame(maxWidth: .infinity)
                         .padding()
@@ -62,11 +76,5 @@ struct HomeView: View {
             }
         }
         .background(Color("Background"))
-    }
-}
-
-struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeView()
     }
 }
