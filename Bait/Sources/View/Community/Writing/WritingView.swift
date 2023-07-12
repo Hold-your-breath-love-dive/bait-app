@@ -21,6 +21,16 @@ struct WritingView: View {
         return dateFormatter.string(from: data.createDate)
     }
     
+    @ViewBuilder func name() -> Text {
+        Text(data.name)
+            .font(.system(size: 14, weight: .semibold))
+    }
+
+    @ViewBuilder func content() -> Text {
+        Text(data.content)
+            .font(.system(size: 14))
+    }
+
     var body: some View {
         TossScrollView(data.title) {
             LazyVStack(spacing: 10) {
@@ -36,8 +46,7 @@ struct WritingView: View {
                     }
                     HStack {
                         VStack(alignment: .leading, spacing: 6) {
-                            Text(data.content)
-                                .font(.system(size: 14))
+                            Text("\(name()) \(content())")
                                 .multilineTextAlignment(.leading)
                             Text("\(formattedDate())")
                                 .font(.system(size: 14))
