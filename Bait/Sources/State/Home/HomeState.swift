@@ -8,5 +8,11 @@
 import Combine
 
 class HomeState: ObservableObject {
-
+    
+    func presentCamara() {
+        
+    }
+    func presentPhoto() {
+        
+    }
 }
