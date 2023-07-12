@@ -30,6 +30,7 @@ struct CreateView: View {
                 .padding(.trailing, 18)
                 .offset(y: -4)
         }
+        .navigationBarHidden(true)
     }
 }
 
