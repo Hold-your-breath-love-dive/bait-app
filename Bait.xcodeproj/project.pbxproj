@@ -24,6 +24,7 @@
 		930AB77F2A5ECDA100796ED9 /* CommunityCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930AB77E2A5ECDA100796ED9 /* CommunityCellView.swift */; };
 		934FAAF72A5ED9680022C92C /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934FAAF62A5ED9680022C92C /* Requests.swift */; };
 		934FAAFA2A5EDD940022C92C /* WritingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934FAAF92A5EDD940022C92C /* WritingView.swift */; };
+		934FAAFD2A5EDE6E0022C92C /* WritingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934FAAFC2A5EDE6E0022C92C /* WritingState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		930AB77E2A5ECDA100796ED9 /* CommunityCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityCellView.swift; sourceTree = "<group>"; };
 		934FAAF62A5ED9680022C92C /* Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
 		934FAAF92A5EDD940022C92C /* WritingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingView.swift; sourceTree = "<group>"; };
+		934FAAFC2A5EDE6E0022C92C /* WritingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				930AB7732A5EC63600796ED9 /* CommunityState.swift */,
+				934FAAFB2A5EDE680022C92C /* Writing */,
 			);
 			path = Community;
 			sourceTree = "<group>";
@@ -205,6 +208,14 @@
 			isa = PBXGroup;
 			children = (
 				934FAAF92A5EDD940022C92C /* WritingView.swift */,
+			);
+			path = Writing;
+			sourceTree = "<group>";
+		};
+		934FAAFB2A5EDE680022C92C /* Writing */ = {
+			isa = PBXGroup;
+			children = (
+				934FAAFC2A5EDE6E0022C92C /* WritingState.swift */,
 			);
 			path = Writing;
 			sourceTree = "<group>";
@@ -294,6 +305,7 @@
 				930AB75E2A5EC49D00796ED9 /* MainView.swift in Sources */,
 				930AB77D2A5ECD5100796ED9 /* Writing.swift in Sources */,
 				930AB77F2A5ECDA100796ED9 /* CommunityCellView.swift in Sources */,
+				934FAAFD2A5EDE6E0022C92C /* WritingState.swift in Sources */,
 				930AB7672A5EC59100796ED9 /* MenuView.swift in Sources */,
 				934FAAFA2A5EDD940022C92C /* WritingView.swift in Sources */,
 				930AB7742A5EC63600796ED9 /* CommunityState.swift in Sources */,
