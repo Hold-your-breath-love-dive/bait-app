@@ -7,12 +7,15 @@
 
 import Combine
 
+public let API: String = "http://127.0.0.1:8080"
+
 class CommunityState: ObservableObject {
-    
-    let API: String = "http://127.0.0.1:8080"
+
     @Published var datas: [Writing]? = nil
     
-    func getData() {
-        
+    func loadData() {
+        Requests.request("\(API)/writing/list", .get, [Writing].self) { data in
+            self.datas = data
+        }
     }
 }

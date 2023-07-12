@@ -8,7 +8,7 @@
 import SwiftUI
 import Kingfisher
 
-struct ComminutyCellView: View {
+struct CommunityCellView: View {
     
     let data: Writing
 
@@ -39,16 +39,22 @@ struct ComminutyCellView: View {
                     .scaledToFill()
                     .frame(height: 195)
             }
-            VStack(alignment: .leading, spacing: 6) {
-                Text("\(title()) \(content())")
-                    .lineLimit(2)
-                    .multilineTextAlignment(.leading)
-                Text("\(formattedDate()) · \(data.commentCount)개의 댓글")
-                    .font(.system(size: 14, weight: .semibold))
-                    .foregroundColor(.gray)
+            HStack {
+                VStack(alignment: .leading, spacing: 6) {
+                    Text("\(title()) \(content())")
+                        .lineLimit(2)
+                        .multilineTextAlignment(.leading)
+                        .foregroundColor(Color(.label))
+                    Text("\(formattedDate()) · \(data.commentCount)개의 댓글")
+                        .font(.system(size: 14))
+                        .foregroundColor(.gray)
+                }
+                Spacer()
             }
         }
+        .frame(maxWidth: .infinity)
         .padding(10)
+        .padding(.horizontal, 3)
         .background(Color("Background"))
         .cornerRadius(8)
     }

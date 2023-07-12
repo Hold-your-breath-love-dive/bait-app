@@ -10,14 +10,26 @@ import OpenTDS
 
 struct MainView: View {
     var body: some View {
-        TossTabView {
-            HomeView()
-                .tossTabItem("홈", Image("Home"))
-            CommunityView()
-                .tossTabItem("커뮤니티", Image("Community"))
-            MenuView()
-                .tossTabItem("메뉴", Image("Menu"))
+        NavigationView {
+            TossTabView {
+                HomeView()
+                    .tossTabItem("홈", Image("Home"))
+                CommunityView()
+                    .tossTabItem("커뮤니티", Image("Community"))
+                MenuView()
+                    .tossTabItem("메뉴", Image("Menu"))
+            }
         }
+    }
+}
+
+extension UINavigationController: UIGestureRecognizerDelegate {
+    override open func viewDidLoad() {
+        super.viewDidLoad()
+        interactivePopGestureRecognizer?.delegate = self
+    }
+    public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        return viewControllers.count > 1
     }
 }
 
