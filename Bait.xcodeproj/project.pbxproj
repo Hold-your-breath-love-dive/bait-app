@@ -22,6 +22,8 @@
 		930AB77B2A5ECD4D00796ED9 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930AB77A2A5ECD4D00796ED9 /* Comment.swift */; };
 		930AB77D2A5ECD5100796ED9 /* Writing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930AB77C2A5ECD5100796ED9 /* Writing.swift */; };
 		930AB77F2A5ECDA100796ED9 /* CommunityCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930AB77E2A5ECDA100796ED9 /* CommunityCellView.swift */; };
+		932C312B2A5EF435001402CE /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932C312A2A5EF435001402CE /* CreateView.swift */; };
+		932C312E2A5EF7BD001402CE /* CreateState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932C312D2A5EF7BD001402CE /* CreateState.swift */; };
 		934FAAF72A5ED9680022C92C /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934FAAF62A5ED9680022C92C /* Requests.swift */; };
 		934FAAFA2A5EDD940022C92C /* WritingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934FAAF92A5EDD940022C92C /* WritingView.swift */; };
 		934FAAFD2A5EDE6E0022C92C /* WritingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934FAAFC2A5EDE6E0022C92C /* WritingState.swift */; };
@@ -42,6 +44,8 @@
 		930AB77A2A5ECD4D00796ED9 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		930AB77C2A5ECD5100796ED9 /* Writing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Writing.swift; sourceTree = "<group>"; };
 		930AB77E2A5ECDA100796ED9 /* CommunityCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityCellView.swift; sourceTree = "<group>"; };
+		932C312A2A5EF435001402CE /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
+		932C312D2A5EF7BD001402CE /* CreateState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateState.swift; sourceTree = "<group>"; };
 		934FAAF62A5ED9680022C92C /* Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
 		934FAAF92A5EDD940022C92C /* WritingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingView.swift; sourceTree = "<group>"; };
 		934FAAFC2A5EDE6E0022C92C /* WritingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingState.swift; sourceTree = "<group>"; };
@@ -150,6 +154,7 @@
 				930AB7642A5EC58D00796ED9 /* CommunityView.swift */,
 				930AB77E2A5ECDA100796ED9 /* CommunityCellView.swift */,
 				934FAAF82A5EDD810022C92C /* Writing */,
+				932C31292A5EF428001402CE /* Create */,
 			);
 			path = Community;
 			sourceTree = "<group>";
@@ -183,6 +188,7 @@
 			children = (
 				930AB7732A5EC63600796ED9 /* CommunityState.swift */,
 				934FAAFB2A5EDE680022C92C /* Writing */,
+				932C312C2A5EF7B4001402CE /* Create */,
 			);
 			path = Community;
 			sourceTree = "<group>";
@@ -202,6 +208,22 @@
 				930AB77A2A5ECD4D00796ED9 /* Comment.swift */,
 			);
 			path = Community;
+			sourceTree = "<group>";
+		};
+		932C31292A5EF428001402CE /* Create */ = {
+			isa = PBXGroup;
+			children = (
+				932C312A2A5EF435001402CE /* CreateView.swift */,
+			);
+			path = Create;
+			sourceTree = "<group>";
+		};
+		932C312C2A5EF7B4001402CE /* Create */ = {
+			isa = PBXGroup;
+			children = (
+				932C312D2A5EF7BD001402CE /* CreateState.swift */,
+			);
+			path = Create;
 			sourceTree = "<group>";
 		};
 		934FAAF82A5EDD810022C92C /* Writing */ = {
@@ -300,9 +322,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				930AB7762A5EC63B00796ED9 /* MenuState.swift in Sources */,
+				932C312E2A5EF7BD001402CE /* CreateState.swift in Sources */,
 				930AB7722A5EC62100796ED9 /* HomeState.swift in Sources */,
 				930AB7632A5EC58800796ED9 /* HomeView.swift in Sources */,
 				930AB75E2A5EC49D00796ED9 /* MainView.swift in Sources */,
+				932C312B2A5EF435001402CE /* CreateView.swift in Sources */,
 				930AB77D2A5ECD5100796ED9 /* Writing.swift in Sources */,
 				930AB77F2A5ECDA100796ED9 /* CommunityCellView.swift in Sources */,
 				934FAAFD2A5EDE6E0022C92C /* WritingState.swift in Sources */,
