@@ -85,7 +85,9 @@ struct CreateView: View {
             }
             .showDismiss()
             Button(action: {
-                dismiss()
+                state.write {
+                    dismiss()
+                }
             }) {
                 Text("완료")
                     .font(.system(size: 17, weight: .semibold))

@@ -17,6 +17,16 @@ class CreateState: ObservableObject {
     @Published var password: String = String()
     @Published var content: String = String()
     
-    func loadData(id: Int) {
+    func write(completion: @escaping () -> Void) {
+        var params = ["name": self.name,
+                      "password": self.password,
+                      "title": self.title,
+                      "content": self.content]
+        if let imageData = self.imageData {
+            params["image"] = imageData.base64EncodedString()
+        }
+        Requests.simple("\(API)/writing", .post, params: params) {
+            completion()
+        }
     }
 }
