@@ -9,4 +9,10 @@ import Combine
 
 class CommunityState: ObservableObject {
     
+    let API: String = "http://127.0.0.1:8080"
+    @Published var datas: [Writing]? = nil
+    
+    func getData() {
+        
+    }
 }

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct ComminutyCellView: View {
     
@@ -28,13 +29,24 @@ struct ComminutyCellView: View {
     }
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 6) {
-            Text("\(title()) \(content())")
-                .lineLimit(2)
-                .multilineTextAlignment(.leading)
-            Text("\(formattedDate()) · \(data.commentCount)개의 댓글")
-                .font(.system(size: 14, weight: .semibold))
-                .foregroundColor(.gray)
+        VStack(spacing: 0) {
+            if let image = data.image {
+                KFImage(URL(string: image)!)
+                    .placeholder {
+                        Color("Background")
+                    }
+                    .resizable()
+                    .scaledToFill()
+                    .frame(height: 195)
+            }
+            VStack(alignment: .leading, spacing: 6) {
+                Text("\(title()) \(content())")
+                    .lineLimit(2)
+                    .multilineTextAlignment(.leading)
+                Text("\(formattedDate()) · \(data.commentCount)개의 댓글")
+                    .font(.system(size: 14, weight: .semibold))
+                    .foregroundColor(.gray)
+            }
         }
         .padding(10)
         .background(Color("Background"))
