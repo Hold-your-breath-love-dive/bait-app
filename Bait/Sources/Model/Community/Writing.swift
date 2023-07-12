@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct GetWriting: Codable {
+struct Writing: Codable {
     let id, commentCount: Int
     let name, title, content: String
     let createDate: Date
