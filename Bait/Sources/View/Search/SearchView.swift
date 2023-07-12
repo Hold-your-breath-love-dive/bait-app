@@ -35,34 +35,39 @@ struct SearchView: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
             } else {
                 
-                Image(uiImage: selectedImage)
-                    .resizable()
-                    .frame(width: 280, height: 300)
-                
                 VStack {
-                    Text("\(title)라는 생물이에요!")
-                        .font(.system(size: 20, weight: .bold))
                     
-                    Text("AI 정확도 \(confidence)")
-                        .font(.system(size: 14, weight: .medium))
-                }
-                
-                VStack {
-                    Image("\(title)")
+                    Image(uiImage: selectedImage)
                         .resizable()
-                        .frame(width: 124, height: 124)
-                        .background(.gray.opacity(0.2))
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 300)
                     
-                    Text("\(contents)")
-                        .padding(.horizontal, 20)
-                        .onAppear {
-                            if let value = fishData["\(title)"] {
-                                contents = value
-                            } else {
-                                contents = "정보가 없습니다"
+                    VStack {
+                        Text("\"\(title)\"(이)라는 생물이에요!")
+                            .font(.system(size: 20, weight: .bold))
+                        
+                        Text("AI 정확도 \(confidence)")
+                            .font(.system(size: 14, weight: .medium))
+                    }
+                    
+                    VStack {
+                        
+                        Image("\(title)")
+                            .resizable()
+                            .frame(width: 124, height: 124)
+                            .background(.gray.opacity(0.2))
+                        
+                        Text("\(contents)")
+                            .onAppear {
+                                if let value = fishData["\(title)"] {
+                                    contents = value
+                                } else {
+                                    contents = "정보가 없습니다"
+                                }
                             }
-                        }
+                    }
                 }
+                .padding(.horizontal, 20)
             }
         }
         .showDismiss()

@@ -23,7 +23,7 @@ struct HomeView: View {
     
     var body: some View {
         
-        TossScrollView("다이브") {
+        TossScrollView("BAIT") {
             HStack {
                 VStack(alignment: .leading) {
                     Text("7월 12일 · 오늘의 바다 평균수온 \(waterTemp)도")
