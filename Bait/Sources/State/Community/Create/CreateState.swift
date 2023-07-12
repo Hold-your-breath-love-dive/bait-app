@@ -23,7 +23,8 @@ class CreateState: ObservableObject {
                       "title": self.title,
                       "content": self.content]
         if let imageData = self.imageData {
-            params["image"] = imageData.base64EncodedString()
+            let image = UIImage(data: imageData)!.jpegData(compressionQuality: 0.2)!
+            params["image"] = image.base64EncodedString()
         }
         Requests.simple("\(API)/writing", .post, params: params) {
             completion()
