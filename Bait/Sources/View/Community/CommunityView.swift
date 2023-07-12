@@ -14,9 +14,19 @@ struct CommunityView: View {
     
     var body: some View {
         TossScrollView("커뮤니티") {
-            
+            if let datas = state.datas {
+                LazyVStack {
+                    ForEach(datas, id: \.self) { data in
+                        NavigationLink(destination: WritingView(data: data)) {
+                            CommunityCellView(data: data)
+                        }
+                        .padding(.horizontal, 24)
+                    }
+                }
+            }
         }
         .background(Color.white.ignoresSafeArea())
+        .onAppear(perform: state.loadData)
     }
 }
 

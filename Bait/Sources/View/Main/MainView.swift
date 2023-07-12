@@ -10,13 +10,15 @@ import OpenTDS
 
 struct MainView: View {
     var body: some View {
-        TossTabView {
-            HomeView()
-                .tossTabItem("홈", Image("Home"))
-            CommunityView()
-                .tossTabItem("커뮤니티", Image("Community"))
-            MenuView()
-                .tossTabItem("메뉴", Image("Menu"))
+        NavigationView {
+            TossTabView {
+                HomeView()
+                    .tossTabItem("홈", Image("Home"))
+                CommunityView()
+                    .tossTabItem("커뮤니티", Image("Community"))
+                MenuView()
+                    .tossTabItem("메뉴", Image("Menu"))
+            }
         }
     }
 }
