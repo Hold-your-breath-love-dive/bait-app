@@ -24,7 +24,9 @@ struct StartGameView: View {
             .foregroundColor(.white)
             .cornerRadius(10)
         }
-        .fullScreenCover(isPresented: $showGame, content: GameView.init)
+        .fullScreenCover(isPresented: $showGame) {
+            GameView()
+        }
     }
 }
                 

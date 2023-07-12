@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct GameView: View {
+    
+    @Environment(\.dismiss) var dismiss
     @State private var score = 0
     @State private var timeRemaining = 10
     @State private var showAlert = false
@@ -51,7 +53,10 @@ struct GameView: View {
             Alert(
                 title: Text("Game Over"),
                 message: Text("Final Score: \(score)"),
-                dismissButton: .default(Text("Play Again"), action: restartGame)
+                primaryButton: .default(Text("Play Again"), action: restartGame),
+                secondaryButton: .default(Text("Exit"), action: {
+                    dismiss()
+                })
             )
         }
         .onAppear(perform: startGame)
@@ -140,10 +145,4 @@ struct Fish: Identifiable {
     let imageName: String
     var position: CGPoint
     var size: CGFloat
-}
-
-struct GameView_Previews: PreviewProvider {
-    static var previews: some View {
-        GameView()
-    }
 }
