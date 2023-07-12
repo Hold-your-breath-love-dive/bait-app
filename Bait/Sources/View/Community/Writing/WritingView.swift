@@ -140,9 +140,3 @@ struct WritingView: View {
         }
     }
 }
-
-struct WritingView_Previews: PreviewProvider {
-    static var previews: some View {
-        MainView()
-    }
-}

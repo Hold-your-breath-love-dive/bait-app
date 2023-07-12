@@ -100,9 +100,3 @@ struct CreateView: View {
         .navigationBarHidden(true)
     }
 }
-
-struct CreateView_Previews: PreviewProvider {
-    static var previews: some View {
-        CreateView()
-    }
-}
