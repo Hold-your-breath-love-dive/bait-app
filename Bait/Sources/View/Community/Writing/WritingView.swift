@@ -75,7 +75,7 @@ struct WritingView: View {
                     .cornerRadius(8)
                     if let datas = state.datas {
                         ForEach(datas, id: \.self) { data in
-                            WritingCommentView(data: data)
+                            WritingCommentView(id: self.data.id, data: data)
                                 .environmentObject(state)
                         }
                     }

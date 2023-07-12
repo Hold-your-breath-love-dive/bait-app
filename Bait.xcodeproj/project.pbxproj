@@ -32,6 +32,7 @@
 		932C31442A5EFCA0001402CE /* WritingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932C31422A5EFCA0001402CE /* WritingView.swift */; };
 		932C31492A5EFCE9001402CE /* HomeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932C31482A5EFCE9001402CE /* HomeButtonView.swift */; };
 		932C314D2A5F00A2001402CE /* WritingCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932C314C2A5F00A2001402CE /* WritingCommentView.swift */; };
+		932C314F2A5F0A7F001402CE /* WritingCommentState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932C314E2A5F0A7F001402CE /* WritingCommentState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		932C31422A5EFCA0001402CE /* WritingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingView.swift; sourceTree = "<group>"; };
 		932C31482A5EFCE9001402CE /* HomeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeButtonView.swift; sourceTree = "<group>"; };
 		932C314C2A5F00A2001402CE /* WritingCommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingCommentView.swift; sourceTree = "<group>"; };
+		932C314E2A5F0A7F001402CE /* WritingCommentState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingCommentState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				932C31392A5EFC40001402CE /* WritingState.swift */,
+				932C314E2A5F0A7F001402CE /* WritingCommentState.swift */,
 			);
 			path = Writing;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				930AB77D2A5ECD5100796ED9 /* Writing.swift in Sources */,
 				930AB77F2A5ECDA100796ED9 /* CommunityCellView.swift in Sources */,
 				932C31432A5EFCA0001402CE /* CreateView.swift in Sources */,
+				932C314F2A5F0A7F001402CE /* WritingCommentState.swift in Sources */,
 				520789AC2A5ED81800628356 /* FishClassifier.mlpackage in Sources */,
 				930AB7672A5EC59100796ED9 /* MenuView.swift in Sources */,
 				930AB7742A5EC63600796ED9 /* CommunityState.swift in Sources */,
