@@ -15,7 +15,7 @@ struct CommunityView: View {
     var body: some View {
         TossScrollView("커뮤니티") {
             if let datas = state.datas {
-                LazyVStack {
+                LazyVStack(spacing: 10) {
                     ForEach(datas, id: \.self) { data in
                         NavigationLink(destination: WritingView(data: data)) {
                             CommunityCellView(data: data)
@@ -32,6 +32,6 @@ struct CommunityView: View {
 
 struct CommunityView_Previews: PreviewProvider {
     static var previews: some View {
-        CommunityView()
+        MainView()
     }
 }

@@ -14,7 +14,7 @@ struct CommunityCellView: View {
 
     @ViewBuilder func title() -> Text {
         Text(data.title)
-            .font(.system(size: 14, weight: .bold))
+            .font(.system(size: 14, weight: .semibold))
     }
 
     @ViewBuilder func content() -> Text {
@@ -29,30 +29,32 @@ struct CommunityCellView: View {
     }
     
     var body: some View {
-        HStack {
-            VStack(spacing: 0) {
-                if let image = data.image {
-                    KFImage(URL(string: image)!)
-                        .placeholder {
-                            Color("Background")
-                        }
-                        .resizable()
-                        .scaledToFill()
-                        .frame(height: 195)
-                }
+        VStack(spacing: 0) {
+            if let image = data.image {
+                KFImage(URL(string: image)!)
+                    .placeholder {
+                        Color("Background")
+                    }
+                    .resizable()
+                    .scaledToFill()
+                    .frame(height: 195)
+            }
+            HStack {
                 VStack(alignment: .leading, spacing: 6) {
                     Text("\(title()) \(content())")
                         .lineLimit(2)
                         .multilineTextAlignment(.leading)
+                        .foregroundColor(Color(.label))
                     Text("\(formattedDate()) · \(data.commentCount)개의 댓글")
-                        .font(.system(size: 14, weight: .medium))
+                        .font(.system(size: 14))
                         .foregroundColor(.gray)
                 }
+                Spacer()
             }
-            Spacer()
         }
         .frame(maxWidth: .infinity)
         .padding(10)
+        .padding(.horizontal, 3)
         .background(Color("Background"))
         .cornerRadius(8)
     }
