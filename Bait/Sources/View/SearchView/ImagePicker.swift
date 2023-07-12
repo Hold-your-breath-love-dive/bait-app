@@ -12,7 +12,7 @@ import Vision
 
 struct ImagePicker: UIViewControllerRepresentable {
 
-    @Binding var result: String
+    @Binding1 var result: String
     @Binding var selectedImage: UIImage
     @Environment(\.presentationMode)  var presentationMode
     
@@ -60,17 +60,17 @@ final class Coordinator: NSObject, UIImagePickerControllerDelegate, UINavigation
     
     //MARK: The classification part
     func classify(image: UIImage) {
-        // Converts the UIImage to a CIImage object.
+        
         guard let ciImage = CIImage(image: image) else {
             print("Unable to create CIImage")
             return
         }
-        // it is best to perform the request on a background queue, so as not to block the main thread. all the calculations may take a one or two moments
+        
         DispatchQueue.global(qos: .userInitiated).async {
-            // Create a new VNImageRequestHandler for this image
+            
             let handler = VNImageRequestHandler(ciImage: ciImage)
             do {
-                // you can perform multiple Vision requests on the same image if you want to. Here, you just use the VNCoreMLRequest object from the classificationRequest property you made earlier.
+            
                 try handler.perform([self.classificationRequest])
             } catch {
                 print("Failed to perform classification: \(error)")
@@ -80,17 +80,15 @@ final class Coordinator: NSObject, UIImagePickerControllerDelegate, UINavigation
     
     lazy var classificationRequest: VNCoreMLRequest = {
       do {
-        // Create an instance of HealthySnacks. This is the class from the .mlmodel file’s automatically generated code.
-        // You won’t use this class directly, only so you can pass its MLModel object to Vision.
+        
         let model = FishClassifier()
-        // Create a VNCoreMLModel object. This is a wrapper object that connects the MLModel instance from the Core ML framework with Vision.
+        
         let visionModel = try VNCoreMLModel(for: model.model)
-        // Create the VNCoreMLRequest object. This object will perform the actual actions of converting the input image to a CVPixelBuffer, scaling it to 227×227, running the Core ML model, interpreting the results, and so on.
-        // Vision will automatically scale the image to the correct size.
+        
         let request = VNCoreMLRequest(model: visionModel, completionHandler: { [weak self] request, error in
           self?.processObservations(for: request, error: error)
         })
-        // The imageCropAndScaleOption tells Vision how it should resize the photo down to the 227×227 pixels that the model expects.
+        
         request.imageCropAndScaleOption = .centerCrop
         return request
       } catch {
@@ -99,11 +97,11 @@ final class Coordinator: NSObject, UIImagePickerControllerDelegate, UINavigation
     }()
     
     func processObservations(for request: VNRequest, error: Error?) {
-        // The request’s completion handler is called on the same background queue from which you launched the request.
+        
         DispatchQueue.main.async {
-            // If everything went well, the request’s results array contains one or more VNClassificationObservation objects
+            
             if let results = request.results as? [VNClassificationObservation] {
-                // Assuming the array is not empty, it contains a VNClassificationObservation object for each possible class
+                
                 if results.isEmpty {
                     self.parent.result = "nothing found"
                     print("nothing found")

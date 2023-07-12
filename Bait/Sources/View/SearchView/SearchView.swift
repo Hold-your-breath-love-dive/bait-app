@@ -10,11 +10,25 @@ import OpenTDS
 
 struct SearchView: View {
     
+    @Binding var isShowingSearchView: Bool
+    
+    var selectedImage: UIImage
+    
+    var title: String = "검색"
+    
     var body: some View {
         
-        TossScrollView("사진과 비슷한 물고기를 찾았어요!") {
+        TossScrollView("\(title)") {
             
+            Image(uiImage: selectedImage)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 200, height: 200)
         }
+        .showDismiss()
         .background(Color.white.ignoresSafeArea())
+        .onAppear {
+            print(selectedImage.size)
+        }
     }
 }
